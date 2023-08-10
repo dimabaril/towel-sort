@@ -1,14 +1,13 @@
-function towelSort(arr) {
-    for (i = 0; i < arr.length; i++) {
+module.exports = function towelSort(matrix) {
+    if (!matrix) {
+        return [];
+    }
+    for (i = 0; i < matrix.length; i++) {
         if (i % 2) {
-            arr[i].reverse();
+            matrix[i].reverse();
         }
     }
-    return arr.flat();
-}
-
-module.exports = function towelSort(matrix) {
-    return [];
+    return matrix.flat();
 };
 
 // const matrix = [
@@ -17,4 +16,4 @@ module.exports = function towelSort(matrix) {
 //     [7, 8, 9],
 // ];
 // // result [ 1, 2, 3, 6, 5, 4, 7, 8, 9 ]
-// console.log(towelSort(matrix));
+// console.log(module.exports());
